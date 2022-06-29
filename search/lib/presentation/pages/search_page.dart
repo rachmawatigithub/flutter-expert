@@ -1,9 +1,8 @@
+import 'package:core/core.dart';
+import 'package:core/presentation/widgets/movie_card_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import '../../core.dart';
-import '../provider/movie_search_notifier.dart';
-import '../widgets/movie_card_list.dart';
+import 'package:search/presentation/provider/movie_search_notifier.dart';
 
 class SearchPage extends StatelessWidget {
   static const ROUTE_NAME = '/search';

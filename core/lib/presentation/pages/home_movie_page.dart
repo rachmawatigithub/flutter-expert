@@ -3,7 +3,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/presentation/pages/home_tv.dart';
 import 'package:core/presentation/pages/movie_detail_page.dart';
 import 'package:core/presentation/pages/popular_movies_page.dart';
-import 'package:core/presentation/pages/search_page.dart';
 import 'package:core/presentation/pages/top_rated_movies_page.dart';
 import 'package:core/presentation/pages/watchlist_movies_page.dart';
 import 'package:core/presentation/pages/watchlist_tv_page.dart';
@@ -12,6 +11,7 @@ import 'package:provider/provider.dart';
 
 import '../../core.dart';
 import '../../domain/entities/movie.dart';
+import '../../utils/routes.dart';
 import '../provider/movie_list_notifier.dart';
 
 class HomeMoviePage extends StatefulWidget {
@@ -101,7 +101,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SearchPage.ROUTE_NAME);
+              Navigator.pushNamed(context, SEARCH_ROUTE);
             },
             icon: Icon(Icons.search),
           )

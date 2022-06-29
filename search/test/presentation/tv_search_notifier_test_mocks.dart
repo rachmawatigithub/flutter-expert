@@ -7,7 +7,7 @@ import 'package:dartz/dartz.dart' as _i3;
 import 'package:core/utils/failure.dart' as _i6;
 import 'package:core/domain/entities/tv_entities.dart' as _i7;
 import 'package:core/domain/repositories/tv_repository.dart' as _i2;
-import 'package:core/domain/usecases/search_tv.dart' as _i4;
+import 'package:search/domain/usecases/search_tv.dart' as _i4;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint

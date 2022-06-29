@@ -1,13 +1,13 @@
 import 'package:core/core.dart';
 import 'package:core/domain/entities/tv_entities.dart';
-import 'package:core/domain/usecases/search_tv.dart';
-import 'package:core/presentation/provider/tv_search_notifier.dart';
+import 'package:search/domain/usecases/search_tv.dart';
+import 'package:search/presentation/provider/tv_search_notifier.dart';
 import 'package:dartz/dartz.dart';
 import 'package:core/utils/failure.dart';
 import 'package:core/utils/state_enum.dart';
 import 'package:core/domain/entities/tv_entities.dart';
-import 'package:core/domain/usecases/search_tv.dart';
-import 'package:core/presentation/provider/tv_search_notifier.dart';
+import 'package:search/domain/usecases/search_tv.dart';
+import 'package:search/presentation/provider/tv_search_notifier.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
