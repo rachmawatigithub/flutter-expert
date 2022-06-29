@@ -1,8 +1,8 @@
-import 'package:ditonton/domain/entities/tv_entities.dart';
-import 'package:ditonton/presentation/provider/top_rated_tv_notifier.dart';
+import 'package:core/core.dart';
+import 'package:core/domain/entities/tv_entities.dart';
+import 'package:core/presentation/pages/top_rated_tv_page.dart';
+import 'package:core/presentation/provider/top_rated_tv_notifier.dart';
 import 'package:mockito/annotations.dart';
-import 'package:ditonton/common/state_enum.dart';
-import 'package:ditonton/presentation/pages/top_rated_tv_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -27,39 +27,39 @@ void main() {
   }
 
   testWidgets('Page should display progress bar when loading',
-          (WidgetTester tester) async {
-        when(mockNotifier.state).thenReturn(RequestState.Loading);
+      (WidgetTester tester) async {
+    when(mockNotifier.state).thenReturn(RequestState.Loading);
 
-        final progressFinder = find.byType(CircularProgressIndicator);
-        final centerFinder = find.byType(Center);
+    final progressFinder = find.byType(CircularProgressIndicator);
+    final centerFinder = find.byType(Center);
 
-        await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
+    await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
 
-        expect(centerFinder, findsOneWidget);
-        expect(progressFinder, findsOneWidget);
-      });
+    expect(centerFinder, findsOneWidget);
+    expect(progressFinder, findsOneWidget);
+  });
 
   testWidgets('Page should display when data is loaded',
-          (WidgetTester tester) async {
-        when(mockNotifier.state).thenReturn(RequestState.Loaded);
-        when(mockNotifier.tv).thenReturn(<Tv>[]);
+      (WidgetTester tester) async {
+    when(mockNotifier.state).thenReturn(RequestState.Loaded);
+    when(mockNotifier.tv).thenReturn(<Tv>[]);
 
-        final listViewFinder = find.byType(ListView);
+    final listViewFinder = find.byType(ListView);
 
-        await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
+    await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
 
-        expect(listViewFinder, findsOneWidget);
-      });
+    expect(listViewFinder, findsOneWidget);
+  });
 
   testWidgets('Page should display text with message when Error',
-          (WidgetTester tester) async {
-        when(mockNotifier.state).thenReturn(RequestState.Error);
-        when(mockNotifier.message).thenReturn('Error message');
+      (WidgetTester tester) async {
+    when(mockNotifier.state).thenReturn(RequestState.Error);
+    when(mockNotifier.message).thenReturn('Error message');
 
-        final textFinder = find.byKey(Key('error_message'));
+    final textFinder = find.byKey(Key('error_message'));
 
-        await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
+    await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
 
-        expect(textFinder, findsOneWidget);
-      });
+    expect(textFinder, findsOneWidget);
+  });
 }

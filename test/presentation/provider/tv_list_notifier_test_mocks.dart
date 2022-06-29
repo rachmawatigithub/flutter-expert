@@ -5,12 +5,12 @@
 import 'dart:async' as _i5;
 
 import 'package:dartz/dartz.dart' as _i3;
-import 'package:ditonton/common/failure.dart' as _i6;
-import 'package:ditonton/domain/entities/tv_entities.dart' as _i7;
-import 'package:ditonton/domain/repositories/tv_repository.dart' as _i2;
-import 'package:ditonton/domain/usecases/get_now_playing_tv.dart' as _i4;
-import 'package:ditonton/domain/usecases/get_popular_tv.dart' as _i8;
-import 'package:ditonton/domain/usecases/get_top_rated_tv.dart' as _i9;
+import 'package:core/utils/failure.dart' as _i6;
+import 'package:core/domain/entities/tv_entities.dart' as _i7;
+import 'package:core/domain/repositories/tv_repository.dart' as _i2;
+import 'package:core/domain/usecases/get_now_playing_tv.dart' as _i4;
+import 'package:core/domain/usecases/get_popular_tv.dart' as _i8;
+import 'package:core/domain/usecases/get_top_rated_tv.dart' as _i9;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -42,9 +42,9 @@ class MockGetNowPlayingTv extends _i1.Mock implements _i4.GetNowPlayingTv {
   @override
   _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>> execute() =>
       (super.noSuchMethod(Invocation.method(#execute, []),
-          returnValue: Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>.value(
-              _FakeEither_1<_i6.Failure, List<_i7.Tv>>()))
-      as _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>);
+              returnValue: Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>.value(
+                  _FakeEither_1<_i6.Failure, List<_i7.Tv>>()))
+          as _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>);
 }
 
 /// A class which mocks [GetPopularTv].
@@ -62,9 +62,9 @@ class MockGetPopularTv extends _i1.Mock implements _i8.GetPopularTv {
   @override
   _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>> execute() =>
       (super.noSuchMethod(Invocation.method(#execute, []),
-          returnValue: Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>.value(
-              _FakeEither_1<_i6.Failure, List<_i7.Tv>>()))
-      as _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>);
+              returnValue: Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>.value(
+                  _FakeEither_1<_i6.Failure, List<_i7.Tv>>()))
+          as _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>);
 }
 
 /// A class which mocks [GetTopRatedTv].
@@ -82,7 +82,7 @@ class MockGetTopRatedTv extends _i1.Mock implements _i9.GetTopRatedTv {
   @override
   _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>> execute() =>
       (super.noSuchMethod(Invocation.method(#execute, []),
-          returnValue: Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>.value(
-              _FakeEither_1<_i6.Failure, List<_i7.Tv>>()))
-      as _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>);
+              returnValue: Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>.value(
+                  _FakeEither_1<_i6.Failure, List<_i7.Tv>>()))
+          as _i5.Future<_i3.Either<_i6.Failure, List<_i7.Tv>>>);
 }

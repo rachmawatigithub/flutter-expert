@@ -1,15 +1,15 @@
 import 'dart:async' as _i11;
 import 'dart:ui' as _i12;
 
-import 'package:ditonton/common/state_enum.dart' as _i9;
-import 'package:ditonton/domain/entities/tv_entities.dart' as _i10;
-import 'package:ditonton/domain/entities/tv_detail_entities.dart' as _i7;
-import 'package:ditonton/domain/usecases/get_tv_detail.dart' as _i2;
-import 'package:ditonton/domain/usecases/get_tv_recomendation.dart' as _i3;
-import 'package:ditonton/domain/usecases/get_watchlits_status_tv.dart' as _i4;
-import 'package:ditonton/domain/usecases/remove_watchlist_tv.dart' as _i6;
-import 'package:ditonton/domain/usecases/save_watchlist_tv.dart' as _i5;
-import 'package:ditonton/presentation/provider/tv_detail_notifier.dart' as _i8;
+import 'package:core/utils/state_enum.dart' as _i9;
+import 'package:core/domain/entities/tv_entities.dart' as _i10;
+import 'package:core/domain/entities/tv_detail_entities.dart' as _i7;
+import 'package:core/domain/usecases/get_tv_detail.dart' as _i2;
+import 'package:core/domain/usecases/get_tv_recomendation.dart' as _i3;
+import 'package:core/domain/usecases/get_watchlits_status_tv.dart' as _i4;
+import 'package:core/domain/usecases/remove_watchlist_tv.dart' as _i6;
+import 'package:core/domain/usecases/save_watchlist_tv.dart' as _i5;
+import 'package:core/presentation/provider/tv_detail_notifier.dart' as _i8;
 import 'package:mockito/mockito.dart' as _i1;
 
 class _FakeGetTvDetail_0 extends _i1.Fake implements _i2.GetTvDetail {}

@@ -4,15 +4,15 @@
 
 import 'dart:async' as _i5;
 import 'package:dartz/dartz.dart' as _i3;
-import 'package:ditonton/common/failure.dart' as _i6;
-import 'package:ditonton/domain/entities/tv_entities.dart' as _i9;
-import 'package:ditonton/domain/entities/tv_detail_entities.dart' as _i7;
-import 'package:ditonton/domain/repositories/tv_repository.dart' as _i2;
-import 'package:ditonton/domain/usecases/get_tv_detail.dart' as _i4;
-import 'package:ditonton/domain/usecases/get_tv_recomendation.dart' as _i8;
-import 'package:ditonton/domain/usecases/get_watchlits_status_tv.dart' as _i10;
-import 'package:ditonton/domain/usecases/remove_watchlist_tv.dart' as _i12;
-import 'package:ditonton/domain/usecases/save_watchlist_tv.dart' as _i11;
+import 'package:core/utils/failure.dart' as _i6;
+import 'package:core/domain/entities/tv_entities.dart' as _i9;
+import 'package:core/domain/entities/tv_detail_entities.dart' as _i7;
+import 'package:core/domain/repositories/tv_repository.dart' as _i2;
+import 'package:core/domain/usecases/get_tv_detail.dart' as _i4;
+import 'package:core/domain/usecases/get_tv_recomendation.dart' as _i8;
+import 'package:core/domain/usecases/get_watchlits_status_tv.dart' as _i10;
+import 'package:core/domain/usecases/remove_watchlist_tv.dart' as _i12;
+import 'package:core/domain/usecases/save_watchlist_tv.dart' as _i11;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -44,9 +44,9 @@ class MockGetTvDetail extends _i1.Mock implements _i4.GetTvDetail {
   @override
   _i5.Future<_i3.Either<_i6.Failure, _i7.TvDetail>> execute(int? id) =>
       (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, _i7.TvDetail>>.value(
-              _FakeEither_1<_i6.Failure, _i7.TvDetail>()))
-      as _i5.Future<_i3.Either<_i6.Failure, _i7.TvDetail>>);
+              returnValue: Future<_i3.Either<_i6.Failure, _i7.TvDetail>>.value(
+                  _FakeEither_1<_i6.Failure, _i7.TvDetail>()))
+          as _i5.Future<_i3.Either<_i6.Failure, _i7.TvDetail>>);
 }
 
 /// A class which mocks [GetTvRecommendations].
@@ -65,9 +65,9 @@ class MockGetTvRecommendations extends _i1.Mock
   @override
   _i5.Future<_i3.Either<_i6.Failure, List<_i9.Tv>>> execute(dynamic id) =>
       (super.noSuchMethod(Invocation.method(#execute, [id]),
-          returnValue: Future<_i3.Either<_i6.Failure, List<_i9.Tv>>>.value(
-              _FakeEither_1<_i6.Failure, List<_i9.Tv>>()))
-      as _i5.Future<_i3.Either<_i6.Failure, List<_i9.Tv>>>);
+              returnValue: Future<_i3.Either<_i6.Failure, List<_i9.Tv>>>.value(
+                  _FakeEither_1<_i6.Failure, List<_i9.Tv>>()))
+          as _i5.Future<_i3.Either<_i6.Failure, List<_i9.Tv>>>);
 }
 
 /// A class which mocks [GetWatchListStatusTv].
@@ -104,9 +104,9 @@ class MockSaveWatchlistTv extends _i1.Mock implements _i11.SaveWatchlistTv {
   @override
   _i5.Future<_i3.Either<_i6.Failure, String>> execute(_i7.TvDetail? tv) =>
       (super.noSuchMethod(Invocation.method(#execute, [tv]),
-          returnValue: Future<_i3.Either<_i6.Failure, String>>.value(
-              _FakeEither_1<_i6.Failure, String>()))
-      as _i5.Future<_i3.Either<_i6.Failure, String>>);
+              returnValue: Future<_i3.Either<_i6.Failure, String>>.value(
+                  _FakeEither_1<_i6.Failure, String>()))
+          as _i5.Future<_i3.Either<_i6.Failure, String>>);
 }
 
 /// A class which mocks [RemoveWatchlistTv].
@@ -124,7 +124,7 @@ class MockRemoveWatchlistTv extends _i1.Mock implements _i12.RemoveWatchlistTv {
   @override
   _i5.Future<_i3.Either<_i6.Failure, String>> execute(_i7.TvDetail? tv) =>
       (super.noSuchMethod(Invocation.method(#execute, [tv]),
-          returnValue: Future<_i3.Either<_i6.Failure, String>>.value(
-              _FakeEither_1<_i6.Failure, String>()))
-      as _i5.Future<_i3.Either<_i6.Failure, String>>);
+              returnValue: Future<_i3.Either<_i6.Failure, String>>.value(
+                  _FakeEither_1<_i6.Failure, String>()))
+          as _i5.Future<_i3.Either<_i6.Failure, String>>);
 }

@@ -1,13 +1,13 @@
+import 'package:core/domain/usecases/get_watchlits_status_tv.dart';
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/common/failure.dart';
-import 'package:ditonton/common/state_enum.dart';
-import 'package:ditonton/domain/entities/tv_entities.dart';
-import 'package:ditonton/domain/usecases/get_tv_detail.dart';
-import 'package:ditonton/domain/usecases/get_tv_recomendation.dart';
-import 'package:ditonton/domain/usecases/get_watchlits_status_tv.dart';
-import 'package:ditonton/domain/usecases/remove_watchlist_tv.dart';
-import 'package:ditonton/domain/usecases/save_watchlist_tv.dart';
-import 'package:ditonton/presentation/provider/tv_detail_notifier.dart';
+import 'package:core/utils/failure.dart';
+import 'package:core/utils/state_enum.dart';
+import 'package:core/domain/entities/tv_entities.dart';
+import 'package:core/domain/usecases/get_tv_detail.dart';
+import 'package:core/domain/usecases/get_tv_recomendation.dart';
+import 'package:core/domain/usecases/remove_watchlist_tv.dart';
+import 'package:core/domain/usecases/save_watchlist_tv.dart';
+import 'package:core/presentation/provider/tv_detail_notifier.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -44,8 +44,8 @@ void main() {
       saveWatchlistTv: mockSaveWatchlist,
       removeWatchlistTv: mockRemoveWatchlist,
     )..addListener(() {
-      listenerCallCount += 1;
-    });
+        listenerCallCount += 1;
+      });
   });
 
   final tId = 1;
@@ -105,15 +105,15 @@ void main() {
     });
 
     test('should change recommendation tv when data is gotten successfully',
-            () async {
-          // arrange
-          _arrangeUsecase();
-          // act
-          await provider.fetchTvDetail(tId);
-          // assert
-          expect(provider.tvState, RequestState.Loaded);
-          expect(provider.tvRecommendations, tTvs);
-        });
+        () async {
+      // arrange
+      _arrangeUsecase();
+      // act
+      await provider.fetchTvDetail(tId);
+      // assert
+      expect(provider.tvState, RequestState.Loaded);
+      expect(provider.tvRecommendations, tTvs);
+    });
   });
 
   group('Get Tv Recommendations', () {
@@ -128,15 +128,15 @@ void main() {
     });
 
     test('should update recommendation state when data is gotten successfully',
-            () async {
-          // arrange
-          _arrangeUsecase();
-          // act
-          await provider.fetchTvDetail(tId);
-          // assert
-          expect(provider.recommendationTvState, RequestState.Loaded);
-          expect(provider.tvRecommendations, tTvs);
-        });
+        () async {
+      // arrange
+      _arrangeUsecase();
+      // act
+      await provider.fetchTvDetail(tId);
+      // assert
+      expect(provider.recommendationTvState, RequestState.Loaded);
+      expect(provider.tvRecommendations, tTvs);
+    });
 
     test('should update error message when request in successful', () async {
       // arrange

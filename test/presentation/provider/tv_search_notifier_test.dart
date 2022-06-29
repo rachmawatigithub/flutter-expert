@@ -1,9 +1,13 @@
+import 'package:core/core.dart';
+import 'package:core/domain/entities/tv_entities.dart';
+import 'package:core/domain/usecases/search_tv.dart';
+import 'package:core/presentation/provider/tv_search_notifier.dart';
 import 'package:dartz/dartz.dart';
-import 'package:ditonton/common/failure.dart';
-import 'package:ditonton/common/state_enum.dart';
-import 'package:ditonton/domain/entities/tv_entities.dart';
-import 'package:ditonton/domain/usecases/search_tv.dart';
-import 'package:ditonton/presentation/provider/tv_search_notifier.dart';
+import 'package:core/utils/failure.dart';
+import 'package:core/utils/state_enum.dart';
+import 'package:core/domain/entities/tv_entities.dart';
+import 'package:core/domain/usecases/search_tv.dart';
+import 'package:core/presentation/provider/tv_search_notifier.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
@@ -30,7 +34,7 @@ void main() {
     id: 1399,
     originalName: 'Game of Thrones',
     overview:
-    "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+        "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
     popularity: 29.780826,
     posterPath: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
     firstAirDate: '2011-04-17',
@@ -53,17 +57,17 @@ void main() {
     });
 
     test('should change search result data when data is gotten successfully',
-            () async {
-          // arrange
-          when(mockSearchTv.execute(tQuery))
-              .thenAnswer((_) async => Right(tTvList));
-          // act
-          await provider.fetchTvSearch(tQuery);
-          // assert
-          expect(provider.state, RequestState.Loaded);
-          expect(provider.searchTvResult, tTvList);
-          expect(listenerCallCount, 2);
-        });
+        () async {
+      // arrange
+      when(mockSearchTv.execute(tQuery))
+          .thenAnswer((_) async => Right(tTvList));
+      // act
+      await provider.fetchTvSearch(tQuery);
+      // assert
+      expect(provider.state, RequestState.Loaded);
+      expect(provider.searchTvResult, tTvList);
+      expect(listenerCallCount, 2);
+    });
 
     test('should return error when data is unsuccessful', () async {
       // arrange
