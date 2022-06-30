@@ -5,13 +5,13 @@ import 'package:provider/provider.dart';
 import 'package:search/presentation/provider/movie_search_notifier.dart';
 
 class SearchPage extends StatelessWidget {
-  static const ROUTE_NAME = '/search';
+  static const SEARCH_MOVIE = '/search-movie';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search'),
+        title: Text('Search Movie'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

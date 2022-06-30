@@ -6,7 +6,7 @@ import '../provider/popular_tv_notifier.dart';
 import '../widgets/tv_card_list.dart';
 
 class PopularTelevisionPage extends StatefulWidget {
-  static const ROUTE_NAME = '/popular-tv';
+  static const POPULAR_TV = '/popular-tv';
 
   @override
   _PopularTelevisionPageState createState() => _PopularTelevisionPageState();

@@ -5,13 +5,13 @@ import 'package:provider/provider.dart';
 import 'package:search/presentation/provider/tv_search_notifier.dart';
 
 class SearchTelevisionPage extends StatelessWidget {
-  static const ROUTE_NAME = '/search-tv';
+  static const SEARCH_TV = '/search-tv';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search'),
+        title: Text('Search TV'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

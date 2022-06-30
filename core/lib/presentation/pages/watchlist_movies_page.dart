@@ -7,7 +7,7 @@ import '../provider/watchlist_movie_notifier.dart';
 import '../widgets/movie_card_list.dart';
 
 class WatchlistMoviesPage extends StatefulWidget {
-  static const ROUTE_NAME = '/watchlist-movie';
+  static const WATCHLIST_MOVIE = '/watchlist-movie';
 
   @override
   _WatchlistMoviesPageState createState() => _WatchlistMoviesPageState();
@@ -38,7 +38,7 @@ class _WatchlistMoviesPageState extends State<WatchlistMoviesPage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Watchlist'),
+        title: Text('Watchlist Movies'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

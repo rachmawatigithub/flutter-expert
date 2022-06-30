@@ -72,7 +72,7 @@ class _HomeTelevisionPageState extends State<HomeTelevisionPage> {
                   title: Text('Movie Watchlist'),
                   onTap: () {
                     Navigator.pushNamed(
-                        context, WatchlistMoviesPage.ROUTE_NAME);
+                        context, WatchlistMoviesPage.WATCHLIST_MOVIE);
                   },
                 ),
                 ListTile(
@@ -80,7 +80,7 @@ class _HomeTelevisionPageState extends State<HomeTelevisionPage> {
                   title: Text('Tv Series Watchlist'),
                   onTap: () {
                     Navigator.pushNamed(
-                        context, WatchlistTelevisionPage.ROUTE_NAME);
+                        context, WatchlistTelevisionPage.WATCHLIST_TV);
                   },
                 ),
               ],
@@ -100,7 +100,7 @@ class _HomeTelevisionPageState extends State<HomeTelevisionPage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SEARCH_ROUTE);
+              Navigator.pushNamed(context, SEARCH_TV);
             },
             icon: Icon(Icons.search),
           )
@@ -131,7 +131,7 @@ class _HomeTelevisionPageState extends State<HomeTelevisionPage> {
               _buildSubHeading(
                 title: 'Popular TV',
                 onTap: () => Navigator.pushNamed(
-                    context, PopularTelevisionPage.ROUTE_NAME),
+                    context, PopularTelevisionPage.POPULAR_TV),
               ),
               Consumer<TvListNotifier>(builder: (context, data, child) {
                 final state = data.popularTvState;
@@ -148,7 +148,7 @@ class _HomeTelevisionPageState extends State<HomeTelevisionPage> {
               _buildSubHeading(
                 title: 'Top Rated TV',
                 onTap: () => Navigator.pushNamed(
-                    context, TopRatedTelevisionPage.ROUTE_NAME),
+                    context, TopRatedTelevisionPage.TOP_RATED_TV),
               ),
               Consumer<TvListNotifier>(builder: (context, data, child) {
                 final state = data.topRatedTvState;
@@ -210,7 +210,7 @@ class TvList extends StatelessWidget {
               onTap: () {
                 Navigator.pushNamed(
                   context,
-                  TelevisionDetailPage.ROUTE_NAME,
+                  TelevisionDetailPage.TV_DETAIL,
                   arguments: tvs.id,
                 );
               },

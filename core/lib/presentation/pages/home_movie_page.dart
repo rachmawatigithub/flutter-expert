@@ -73,7 +73,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                   title: Text('Movies Watchlist'),
                   onTap: () {
                     Navigator.pushNamed(
-                        context, WatchlistMoviesPage.ROUTE_NAME);
+                        context, WatchlistMoviesPage.WATCHLIST_MOVIE);
                   },
                 ),
                 ListTile(
@@ -81,7 +81,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                   title: Text('Tv Series Watchlist'),
                   onTap: () {
                     Navigator.pushNamed(
-                        context, WatchlistTelevisionPage.ROUTE_NAME);
+                        context, WatchlistTelevisionPage.WATCHLIST_TV);
                   },
                 ),
               ],
@@ -101,7 +101,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, SEARCH_ROUTE);
+              Navigator.pushNamed(context, SEARCH_MOVIE);
             },
             icon: Icon(Icons.search),
           )
@@ -114,7 +114,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Now Playing',
+                'Now Playing Movie',
                 style: kHeading6,
               ),
               Consumer<MovieListNotifier>(builder: (context, data, child) {
@@ -130,7 +130,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                 }
               }),
               _buildSubHeading(
-                title: 'Popular',
+                title: 'Popular Movie',
                 onTap: () =>
                     Navigator.pushNamed(context, PopularMoviesPage.ROUTE_NAME),
               ),
@@ -147,9 +147,9 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                 }
               }),
               _buildSubHeading(
-                title: 'Top Rated',
-                onTap: () =>
-                    Navigator.pushNamed(context, TopRatedMoviesPage.ROUTE_NAME),
+                title: 'Top Rated Movie',
+                onTap: () => Navigator.pushNamed(
+                    context, TopRatedMoviesPage.TOP_RATED_MOVIE),
               ),
               Consumer<MovieListNotifier>(builder: (context, data, child) {
                 final state = data.topRatedMoviesState;

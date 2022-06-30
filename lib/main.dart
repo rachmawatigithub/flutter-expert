@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
               return MaterialPageRoute(builder: (_) => HomeMoviePage());
             case PopularMoviesPage.ROUTE_NAME:
               return CupertinoPageRoute(builder: (_) => PopularMoviesPage());
-            case TopRatedMoviesPage.ROUTE_NAME:
+            case TopRatedMoviesPage.TOP_RATED_MOVIE:
               return CupertinoPageRoute(builder: (_) => TopRatedMoviesPage());
             case MovieDetailPage.ROUTE_NAME:
               final id = settings.arguments as int;
@@ -104,27 +104,27 @@ class MyApp extends StatelessWidget {
 
             case '/tv':
               return MaterialPageRoute(builder: (_) => HomeTelevisionPage());
-            case PopularTelevisionPage.ROUTE_NAME:
+            case PopularTelevisionPage.POPULAR_TV:
               return CupertinoPageRoute(
                   builder: (_) => PopularTelevisionPage());
-            case TopRatedTelevisionPage.ROUTE_NAME:
+            case TopRatedTelevisionPage.TOP_RATED_TV:
               return CupertinoPageRoute(
                   builder: (_) => TopRatedTelevisionPage());
-            case TelevisionDetailPage.ROUTE_NAME:
+            case TelevisionDetailPage.TV_DETAIL:
               final id = settings.arguments as int;
               return MaterialPageRoute(
                 builder: (_) => TelevisionDetailPage(id: id),
                 settings: settings,
               );
 
-            case SearchPage.ROUTE_NAME:
+            case SearchPage.SEARCH_MOVIE:
               return CupertinoPageRoute(builder: (_) => SearchPage());
-            case WatchlistMoviesPage.ROUTE_NAME:
+            case WatchlistMoviesPage.WATCHLIST_MOVIE:
               return MaterialPageRoute(builder: (_) => WatchlistMoviesPage());
 
-            case SearchTelevisionPage.ROUTE_NAME:
+            case SearchTelevisionPage.SEARCH_TV:
               return CupertinoPageRoute(builder: (_) => SearchTelevisionPage());
-            case WatchlistTelevisionPage.ROUTE_NAME:
+            case WatchlistTelevisionPage.WATCHLIST_TV:
               return MaterialPageRoute(
                   builder: (_) => WatchlistTelevisionPage());
 

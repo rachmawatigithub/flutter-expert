@@ -6,7 +6,7 @@ import '../provider/top_rated_tv_notifier.dart';
 import '../widgets/tv_card_list.dart';
 
 class TopRatedTelevisionPage extends StatefulWidget {
-  static const ROUTE_NAME = '/top-rated-tv';
+  static const TOP_RATED_TV = '/top-rated-tv';
 
   @override
   _TopRatedTelevisionPageState createState() => _TopRatedTelevisionPageState();

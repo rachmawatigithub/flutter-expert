@@ -11,7 +11,7 @@ import '../../utils/state_enum.dart';
 import '../provider/tv_detail_notifier.dart';
 
 class TelevisionDetailPage extends StatefulWidget {
-  static const ROUTE_NAME = '/detail-tv';
+  static const TV_DETAIL = '/detail-tv';
 
   final int id;
   TelevisionDetailPage({required this.id});
@@ -208,7 +208,7 @@ class DetailContent extends StatelessWidget {
                                             onTap: () {
                                               Navigator.pushReplacementNamed(
                                                 context,
-                                                TelevisionDetailPage.ROUTE_NAME,
+                                                TelevisionDetailPage.TV_DETAIL,
                                                 arguments: tv.id,
                                               );
                                             },
