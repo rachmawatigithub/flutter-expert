@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:search/presentation/provider/tv_search_notifier.dart';
 
-class SearchTelevisionPage extends StatelessWidget {
+class SearchTvPage extends StatelessWidget {
   static const SEARCH_TV = '/search-tv';
 
   @override

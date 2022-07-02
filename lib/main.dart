@@ -18,6 +18,8 @@ import 'package:core/presentation/provider/top_rated_movies_notifier.dart';
 import 'package:core/presentation/provider/top_rated_tv_notifier.dart';
 import 'package:core/presentation/provider/tv_detail_notifier.dart';
 import 'package:core/presentation/provider/tv_list_notifier.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:search/presentation/bloc/movie/search_movie_bloc.dart';
 import 'package:search/presentation/pages/search_tv_page.dart';
 import 'package:search/presentation/provider/tv_search_notifier.dart';
 import 'package:search/search.dart';
@@ -46,8 +48,8 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_) => di.locator<MovieDetailNotifier>(),
         ),
-        ChangeNotifierProvider(
-          create: (_) => di.locator<MovieSearchNotifier>(),
+        BlocProvider(
+          create: (_) => di.locator<SearchMovieBloc>(),
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<TopRatedMoviesNotifier>(),
@@ -117,13 +119,13 @@ class MyApp extends StatelessWidget {
                 settings: settings,
               );
 
-            case SearchPage.SEARCH_MOVIE:
-              return CupertinoPageRoute(builder: (_) => SearchPage());
+            case SearchMoviePage.SEARCH_MOVIE:
+              return CupertinoPageRoute(builder: (_) => SearchMoviePage());
             case WatchlistMoviesPage.WATCHLIST_MOVIE:
               return MaterialPageRoute(builder: (_) => WatchlistMoviesPage());
 
-            case SearchTelevisionPage.SEARCH_TV:
-              return CupertinoPageRoute(builder: (_) => SearchTelevisionPage());
+            case SearchTvPage.SEARCH_TV:
+              return CupertinoPageRoute(builder: (_) => SearchTvPage());
             case WatchlistTelevisionPage.WATCHLIST_TV:
               return MaterialPageRoute(
                   builder: (_) => WatchlistTelevisionPage());
