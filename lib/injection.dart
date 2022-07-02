@@ -40,6 +40,7 @@ import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 import 'package:search/domain/usecases/search_tv.dart';
 import 'package:search/presentation/bloc/movie/search_movie_bloc.dart';
+import 'package:search/presentation/bloc/tv/search_tv_bloc.dart';
 import 'package:search/presentation/provider/tv_search_notifier.dart';
 import 'package:search/search.dart';
 
@@ -49,6 +50,11 @@ void init() {
   // bloc
   locator.registerFactory(
     () => SearchMovieBloc(
+      locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => SearchTvBloc(
       locator(),
     ),
   );
