@@ -57,7 +57,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                   leading: Icon(Icons.movie),
                   title: Text('Movies'),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.pushNamed(context, HomeMoviePage.ROUTE_HOMEMOVIE);
                   },
                 ),
                 ListTile(
