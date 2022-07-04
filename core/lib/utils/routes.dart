@@ -9,3 +9,5 @@ const SEARCH_TV = '/search-tv';
 const WATCHLIST_MOVIE = '/watchlist-movie';
 const WATCHLIST_TV = '/watchlist-tv';
 const ABOUT_ROUTE = '/about';
+const ROUTE_HOMEMOVIE = '/home';
+const HOME_TV = '/tv-page';

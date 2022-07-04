@@ -2,7 +2,7 @@ import 'package:core/core.dart';
 import 'package:core/data/datasources/tv_local_data_source.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import '../../dummy_data/dummy_objects_tv.dart';
+import '../../../dummy_data/dummy_objects_tv.dart';
 import '../../helpers/test_helper_tv_mocks.dart';
 
 void main() {

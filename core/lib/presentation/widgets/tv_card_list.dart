@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../../core.dart';
 import '../../domain/entities/tv_entities.dart';
-import '../pages/tv_detail_page.dart';
+import '../pages/tv/tv_detail_page.dart';
 
 class TvCard extends StatelessWidget {
   final Tv tv;
