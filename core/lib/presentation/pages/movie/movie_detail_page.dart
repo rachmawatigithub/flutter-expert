@@ -5,7 +5,6 @@ import 'package:core/presentation/bloc/movie_bloc/watchlist_movie/watchlist_bloc
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-
 import '../../../domain/entities/genre.dart';
 import '../../../domain/entities/movie_detail.dart';
 import '../../bloc/movie_bloc/movie_recomendation/movie_recomd_bloc.dart';
@@ -205,9 +204,7 @@ class _DetailContentState extends State<DetailContent> {
                               'Overview',
                               style: kHeading6,
                             ),
-                            Text(
-                              widget.movie.overview,
-                            ),
+                            Text(widget.movie.overview.toString()),
                             const SizedBox(height: 16),
                             Text(
                               'More Like This',

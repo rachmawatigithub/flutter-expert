@@ -1,10 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:core/data/models/movie_detail_model.dart';
 import 'package:core/data/models/movie_model.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
+
+import '../data/models/movie_detail_model.dart';
 
 class SslPinning {
   Future<SecurityContext> get globalContext async {
