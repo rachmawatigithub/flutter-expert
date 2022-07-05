@@ -49,8 +49,8 @@ import 'package:search/search.dart';
 
 final locator = GetIt.instance;
 
-Future<void> init() async {
-  IOClient ioClient = await SslPinning.ioClient;
+Future<void> get init async {
+  //IOClient ioClient = await SslPinning.ioClient;
 
   // bloc search
   locator.registerFactory(
