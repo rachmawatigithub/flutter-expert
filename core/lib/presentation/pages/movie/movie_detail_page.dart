@@ -197,7 +197,7 @@ class _DetailContentState extends State<DetailContent> {
                                   ),
                                   itemSize: 24,
                                 ),
-                                Text('${widget.movie.voteAverage}')
+                                //Text('${widget.movie.voteAverage}')
                               ],
                             ),
                             const SizedBox(height: 16),
@@ -273,14 +273,14 @@ class _DetailContentState extends State<DetailContent> {
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: Alignment.topCenter,
-                      child: Container(
-                        color: Colors.white,
-                        height: 4,
-                        width: 48,
-                      ),
-                    ),
+                    // Align(
+                    //   alignment: Alignment.topCenter,
+                    //   child: Container(
+                    //     color: Colors.white,
+                    //     height: 4,
+                    //     width: 48,
+                    //   ),
+                    // ),
                   ],
                 ),
               );

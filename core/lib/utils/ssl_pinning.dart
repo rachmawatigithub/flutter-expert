@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
+import 'package:core/data/models/movie_detail_model.dart';
 import 'package:core/data/models/movie_model.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -14,7 +15,7 @@ class SslPinning {
     return securityContext;
   }
 
-  Future<MovieModel> getMovieModel() async {
+  Future<MovieDetailResponse> getMovieDetailResponse() async {
     HttpClient client = HttpClient(context: await globalContext);
     client.badCertificateCallback =
         (X509Certificate cert, String host, int port) => false;
@@ -22,6 +23,6 @@ class SslPinning {
     final response =
         await ioClient.get(Uri.parse('https://api.themoviedb.org/'));
 
-    return MovieModel.fromJson(jsonDecode(response.body)[0]);
+    return MovieDetailResponse.fromJson(jsonDecode(response.body)[0]);
   }
 }

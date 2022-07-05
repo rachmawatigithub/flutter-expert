@@ -205,20 +205,6 @@ class _DetailContentState extends State<DetailContent> {
                             ),
                             Text(widget.tvSeries.overview.toString()),
                             const SizedBox(height: 16),
-                            // Text(
-                            //   'Seasons',
-                            //   style: kHeading6,
-                            // ),
-                            // ListView.builder(
-                            //   itemBuilder: (context, index) {
-                            //     return SeasonCard(
-                            //         widget.tvSeries.seasons[index]);
-                            //   },
-                            //   shrinkWrap: true,
-                            //   itemCount: widget.tvSeries.seasons.length,
-                            //   physics: const NeverScrollableScrollPhysics(),
-                            // ),
-                            const SizedBox(height: 16),
                             Text(
                               'Recommendation',
                               style: kHeading6,

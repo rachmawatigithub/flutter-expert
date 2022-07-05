@@ -1,9 +1,8 @@
 import 'package:core/core.dart';
 import 'package:core/presentation/widgets/movie_card_list.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
-import 'package:search/presentation/provider/movie_search_notifier.dart';
 
 import '../bloc/movie/search_movie_bloc.dart';
 
@@ -24,6 +23,7 @@ class SearchMoviePage extends StatelessWidget {
             TextField(
               onChanged: (query) {
                 context.read<SearchMovieBloc>().add(OnQueryChanged(query));
+                //FirebaseCrashlytics.instance.crash();
               },
               decoration: InputDecoration(
                 hintText: 'Search title',
@@ -32,18 +32,6 @@ class SearchMoviePage extends StatelessWidget {
               ),
               textInputAction: TextInputAction.search,
             ),
-            // TextField(
-            //   onSubmitted: (query) {
-            //     Provider.of<MovieSearchNotifier>(context, listen: false)
-            //         .fetchMovieSearch(query);
-            //   },
-            //   decoration: InputDecoration(
-            //     hintText: 'Search title',
-            //     prefixIcon: Icon(Icons.search),
-            //     border: OutlineInputBorder(),
-            //   ),
-            //   textInputAction: TextInputAction.search,
-            // ),
             SizedBox(height: 16),
             Text(
               'Search Result',

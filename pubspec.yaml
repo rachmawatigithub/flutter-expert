@@ -51,6 +51,7 @@ dependencies:
   mockito: ^5.2.0
   firebase_core: ^1.19.1
   firebase_crashlytics: ^2.8.4
+  firebase_analytics: ^9.1.12
   
 
 dev_dependencies:
