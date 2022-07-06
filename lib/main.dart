@@ -38,7 +38,6 @@ import 'package:ditonton/injection.dart' as di;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  //await SslPinning.init;
   di.init;
   runApp(MyApp());
 }
@@ -69,6 +68,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (_) => di.locator<WatchlistBloc>(),
         ),
+
         //tv
         BlocProvider(
           create: (_) => di.locator<NowPlayingTvBloc>(),
@@ -104,6 +104,7 @@ class MyApp extends StatelessWidget {
         navigatorObservers: [routeObserver],
         onGenerateRoute: (RouteSettings settings) {
           switch (settings.name) {
+            //route movie
             case HomeMoviePage.ROUTE_HOMEMOVIE:
               return MaterialPageRoute(builder: (_) => HomeMoviePage());
             case PopularMoviesPage.POPULAR_MOVIES_ROUTE:
@@ -117,6 +118,7 @@ class MyApp extends StatelessWidget {
                 settings: settings,
               );
 
+            //route tv
             case HomeTelevisionPage.HOME_TV:
               return MaterialPageRoute(builder: (_) => HomeTelevisionPage());
             case PopularTvSeriesPage.POPULAR_TV:
@@ -131,17 +133,18 @@ class MyApp extends StatelessWidget {
                 settings: settings,
               );
 
+            //route search and watchlist
             case SearchMoviePage.SEARCH_MOVIE:
               return CupertinoPageRoute(builder: (_) => SearchMoviePage());
             case WatchlistMoviePage.WATCHLIST_MOVIE:
               return MaterialPageRoute(builder: (_) => WatchlistMoviePage());
-
             case SearchTvPage.SEARCH_TV:
               return CupertinoPageRoute(builder: (_) => SearchTvPage());
             case WatchlistTelevisionPage.WATCHLIST_TV:
               return MaterialPageRoute(
                   builder: (_) => WatchlistTelevisionPage());
 
+            //route about
             case AboutPage.ROUTE_NAME:
               return MaterialPageRoute(builder: (_) => AboutPage());
             default:

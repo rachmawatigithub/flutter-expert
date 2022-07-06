@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:core/data/models/movie_model.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/io_client.dart';
@@ -10,7 +9,7 @@ import '../data/models/movie_detail_model.dart';
 class SslPinning {
   Future<SecurityContext> get globalContext async {
     final sslCert =
-        await rootBundle.load('assets/certificates/certification.cer');
+        await rootBundle.load('assets/certificates/certificate.cer');
     SecurityContext securityContext = SecurityContext(withTrustedRoots: false);
     securityContext.setTrustedCertificatesBytes(sslCert.buffer.asInt8List());
     return securityContext;
