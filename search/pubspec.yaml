@@ -12,8 +12,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
   core:
     path: ../core
+    
   dartz: ^0.10.0
   equatable: ^2.0.3
   flutter_bloc: ^8.0.0
