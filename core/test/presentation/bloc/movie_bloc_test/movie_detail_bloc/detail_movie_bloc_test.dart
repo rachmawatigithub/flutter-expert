@@ -21,8 +21,13 @@ void main() {
 
   const testId = 1;
 
+  setUp(() {
+    mockGetMovieDetail = MockGetMovieDetail();
+    detailMovieBloc = DetailMovieBloc(mockGetMovieDetail);
+  });
+
   test('the DetailMovieBloc initial state should be empty', () {
-    expect(DetailMovieBloc, DetailMovieEmpty());
+    expect(detailMovieBloc.state, DetailMovieEmpty());
   });
 
   blocTest<DetailMovieBloc, DetailMovieState>(
@@ -56,9 +61,4 @@ void main() {
     ],
     verify: (bloc) => DetailMovieLoading(),
   );
-
-  setUp(() {
-    mockGetMovieDetail = MockGetMovieDetail();
-    detailMovieBloc = DetailMovieBloc(mockGetMovieDetail);
-  });
 }

@@ -1,9 +1,5 @@
 part of 'search_tv_bloc.dart';
 
-//import 'package:equatable/equatable.dart';
-
-// import 'package:equatable/equatable.dart';
-
 abstract class SearchTvEvent extends Equatable {
   const SearchTvEvent();
 

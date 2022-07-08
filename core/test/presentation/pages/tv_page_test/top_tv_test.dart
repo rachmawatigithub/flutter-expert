@@ -29,18 +29,18 @@ void main() {
 
   tearDown(() => fakeTopRatedTvBloc.close());
 
-  testWidgets('page should display circular progress indicator when loading',
-      (WidgetTester tester) async {
-    when(() => fakeTopRatedTvBloc.state).thenReturn(TopRatedTvLoading());
+  // testWidgets('page should display circular progress indicator when loading',
+  //     (WidgetTester tester) async {
+  //   when(() => fakeTopRatedTvBloc.state).thenReturn(TopRatedTvLoading());
 
-    final circularProgressIndicatorFinder =
-        find.byType(CircularProgressIndicator);
+  //   final circularProgressIndicatorFinder =
+  //       find.byType(CircularProgressIndicator);
 
-    await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
-    await tester.pump();
+  //   await tester.pumpWidget(_makeTestableWidget(TopRatedTelevisionPage()));
+  //   await tester.pump();
 
-    expect(circularProgressIndicatorFinder, findsOneWidget);
-  });
+  //   expect(circularProgressIndicatorFinder, findsOneWidget);
+  // });
 
   testWidgets('should display text with message when error',
       (WidgetTester tester) async {

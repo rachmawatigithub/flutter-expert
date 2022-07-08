@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# https://medium.com/@nocnoc/combined-code-coverage-for-flutter-and-dart-237b9563ecf8
+# https://medium.com/@nocnoc/combined-code-coverag.\tee-for-flutter-and-dart-237b9563ecf8
 
 # remember some failed commands and report on exit
 error=false

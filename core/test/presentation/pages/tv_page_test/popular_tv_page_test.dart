@@ -31,18 +31,18 @@ void main() {
     fakePopularTvBloc.close();
   });
 
-  testWidgets('Page should display circular progress indicator when loading',
-      (WidgetTester tester) async {
-    when(() => fakePopularTvBloc.state).thenReturn(PopularTvLoading());
+  // testWidgets('Page should display circular progress indicator when loading',
+  //     (WidgetTester tester) async {
+  //   when(() => fakePopularTvBloc.state).thenReturn(PopularTvLoading());
 
-    final circularProgressIndicatorFinder =
-        find.byType(CircularProgressIndicator);
+  //   final circularProgressIndicatorFinder =
+  //       find.byType(CircularProgressIndicator);
 
-    await tester.pumpWidget(_makeTestableWidget(PopularTvSeriesPage()));
-    await tester.pump();
+  //   await tester.pumpWidget(_makeTestableWidget(PopularTvSeriesPage()));
+  //   await tester.pump();
 
-    expect(circularProgressIndicatorFinder, findsOneWidget);
-  });
+  //   expect(circularProgressIndicatorFinder, findsOneWidget);
+  // });
 
   testWidgets('should display text with message when error',
       (WidgetTester tester) async {

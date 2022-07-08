@@ -1,28 +1,27 @@
 import 'package:core/domain/entities/tv_entities.dart';
-import 'package:core/domain/usecases/get_tv_recomendation.dart';
+import 'package:core/domain/usecases/get_now_playing_tv.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import '../../helpers/test_helper_tv_mocks.dart';
+import '../helpers/test_helper_tv.mocks.dart';
 
 void main() {
-  late GetTvRecommendations usecase;
+  late GetNowPlayingTv usecase;
   late MockTvRepository mockTvRepository;
 
   setUp(() {
     mockTvRepository = MockTvRepository();
-    usecase = GetTvRecommendations(mockTvRepository);
+    usecase = GetNowPlayingTv(mockTvRepository);
   });
 
-  final tId = 1;
   final tTv = <Tv>[];
 
-  test('should get list of tv recommendations from the repository', () async {
+  test('should get list of tv from the repository', () async {
     // arrange
-    when(mockTvRepository.getTvRecommendations(tId))
+    when(mockTvRepository.getNowPlayingTv())
         .thenAnswer((_) async => Right(tTv));
     // act
-    final result = await usecase.execute(tId);
+    final result = await usecase.execute();
     // assert
     expect(result, Right(tTv));
   });

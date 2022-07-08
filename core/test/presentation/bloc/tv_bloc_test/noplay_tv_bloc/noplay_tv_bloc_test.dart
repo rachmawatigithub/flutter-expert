@@ -20,12 +20,12 @@ void main() {
     nowPlayingTvBloc = NowPlayingTvBloc(mockGetNowPlayingTv);
   });
 
-  test('the OnTheAirTvseriesBloc initial state should be empty ', () {
+  test('the Now playing Tv Bloc initial state should be empty ', () {
     expect(nowPlayingTvBloc.state, NowPlayingTvEmpty());
   });
 
   blocTest<NowPlayingTvBloc, NowPlayingTvState>(
-      'should emits OnTheAirTvseriesLoading state and then OnTheAirTvseriesHasData state when data is successfully fetched..',
+      'should emits Now playing Tv Loading state and then OnTheAirTvseriesHasData state when data is successfully fetched..',
       build: () {
         when(mockGetNowPlayingTv.execute())
             .thenAnswer((_) async => Right(testTvList));
@@ -42,7 +42,7 @@ void main() {
       });
 
   blocTest<NowPlayingTvBloc, NowPlayingTvState>(
-    'should emits OnTheAirTvseriesLoading state and then OnTheAirTvseriesError state when data is failed fetched..',
+    'should emits Now playing Tv Loading state and then OnTheAirTvseriesError state when data is failed fetched..',
     build: () {
       when(mockGetNowPlayingTv.execute())
           .thenAnswer((_) async => Left(ServerFailure('Server Failure')));
@@ -57,7 +57,7 @@ void main() {
   );
 
   blocTest<NowPlayingTvBloc, NowPlayingTvState>(
-    'should emits OnTheAirTvseriesLoading state and then OnTheAirTvseriesEmpty state when data is retrieved empty..',
+    'should emits Now playing Tv Loading state and then OnTheAirTvseriesEmpty state when data is retrieved empty..',
     build: () {
       when(mockGetNowPlayingTv.execute())
           .thenAnswer((_) async => const Right([]));
