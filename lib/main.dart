@@ -22,8 +22,6 @@ import 'package:core/presentation/pages/movie/top_rated_movies_page.dart';
 import 'package:core/presentation/pages/tv/top_rated_tv_page.dart';
 import 'package:core/presentation/pages/tv/tv_detail_page.dart';
 import 'package:core/presentation/pages/tv/tv_watchlist_page.dart';
-import 'package:core/utils/ssl_pinning.dart';
-import 'package:ditonton/injection.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:search/presentation/bloc/movie/search_movie_bloc.dart';
