@@ -37,8 +37,8 @@ import 'package:ditonton/injection.dart' as di;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  await SslPinning.customHttpClient();
-  di.init();
+  await SslPinning.init();
+  di.init;
   runApp(MyApp());
 }
 
