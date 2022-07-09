@@ -52,7 +52,7 @@ import 'package:search/search.dart';
 
 final locator = GetIt.instance;
 
-Future<void> get init async {
+Future init() async {
   // bloc search
   locator.registerFactory(
     () => SearchMovieBloc(
