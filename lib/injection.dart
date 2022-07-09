@@ -141,6 +141,5 @@ Future init() async {
       () => DatabaseHelperTelevision());
 
   // ssl pinning
-  IOClient ioClient = await SslPinning.ioClient;
-  locator.registerLazySingleton(() => ioClient);
+  locator.registerLazySingleton(() => SslPinning.customHttpClient());
 }
