@@ -141,5 +141,5 @@ Future<void> get init async {
       () => DatabaseHelperTelevision());
 
   // ssl pinning
-  IOClient ioClient = await SslPinning.ioClient;
+  IOClient ioClient = (await SslPinning.customHttpClient()) as IOClient;
 }
